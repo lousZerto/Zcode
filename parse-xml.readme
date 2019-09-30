@@ -1,0 +1,12 @@
+The purpose of this python script is to format the data that is stored in the VPG XML export file.
+
+I've created another python script called xml_elements_long.py which is a list of all the known schemas for the XML files that have been created
+the script has a number of sub-routines that start at the root element within the XML file and then they drill down to the known child elements, 
+these child elements hold the actual VPG data that is stored in the VPG configuration within the ZVM DB.
+
+Usage for the script is as follows:-
+
+./parse-xml.pyExportedSettings_2019-08-31_02-22-44-PM.xml
+
+When completed it will generate a file called ExportedSettings_2019-08-31_02-22-44-PM.xml.csv, this file can then be filtered to find the data for
+specific VPG or it can be used to feed into a VPG Create or Update API call.
